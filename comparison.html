@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <Body>
+    <h2>Comparisons</h2>
+    <p> enter age and click the button:</p>
+    <input id="age" value="18" />
+    <button onclick="myFunction()"> Check </button>
+    <p id="demo"></p>
+    <script>
+        function myFunction(){
+            let verify;
+            let age = Number(document.getElementById("age").value);
+            if (isNaN(age)){
+                verify = "enter a number";
+            } else{
+                verify = (age < 18) ? "too young" : "Old enough"
+            }
+            document.getElementById("demo").innerHTML = verify + " to enter"
+        }
+    </script>
+    </Body>
+</html>

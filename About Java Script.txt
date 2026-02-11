@@ -1,0 +1,302 @@
+About Java Script 
+Java script is the programming language of the web. it iis used to calculate manipulated and validate data.
+
+The <script> tag
+in Html, javaScript code is inserted between <script> and </script>
+JavaScript in <head> or <body>
+You can place any number of scripts in an HTML document.
+Scripts can be placed in the <body>, or in the <head> section of an HTML page, or in both.
+
+JavaScript Syntax
+Syntax Rules
+Syntax are the rules how programs must be constructed:
+// How to Declare variables:
+let x = 5;
+let y = 6;
+
+// How to Compute values:
+let z = x + y;
+
+// I am a Comment. I do Nothing
+
+JavaScript Literals
+The most important syntax rules for literals (fixed values) are:
+
+Numbers are written with or without decimals:
+
+Example
+10.50
+1001
+
+JavaScript Variables
+Variables are containers for storing data values.
+
+Variables must be identified with unique names.
+
+Example
+// Define x as a variable
+let x;
+
+// Assign the value 6 to x
+x = 6;
+
+JavaScript is Case Sensitive
+JavaScript identifiers are case sensitive.
+
+The variables lastName and lastname, are different variables:
+
+Example
+let lastName = "Doe";
+let lastname = "Peterson";
+
+JavaScript Keywords
+JavaScript statements often start with a keyword to identify the JavaScript action to be performed.
+
+Our Reserved Words Reference lists all JavaScript keywords.
+
+Here is a list of some of the keywords you will learn about in this tutorial:
+
+Keyword	Description
+var	        ||  Declares a variable
+let	        ||  Declares a block variable
+const       ||	Declares a block constant
+if          ||	Marks a block of statements to be executed on a condition
+switch      !!	Marks a block of statements to be executed in different cases
+for         ||	Marks a block of statements to be executed in a loop
+function    ||	Declares a function
+return      ||	Exits a function
+try         ||	Implements error handling to a block of statements
+
+JavaScript Comments
+Single Line Comments
+Single line comments start with //.
+
+Multi-line Comments
+Multi-line comments start with /* and end with */.
+
+JavaScript Data Types
+JavaScript variables can hold 8 datatypes, but for now, just think of numbers and strings.
+
+Strings are text written inside quotes.
+
+Numbers are written without quotes.
+
+If you put a number in quotes, it will be treated as a text string.
+
+Example
+const pi = 3.14;
+let person = "John Doe";
+let answer = 'Yes I am!';
+
+One Statement, Many Variables
+You can declare many variables in one statement.
+
+Start the statement with let or constand separate the variables by comma:
+
+Example
+let person = "John Doe", carName = "Volvo", price = 200;
+
+The typeof Operator
+You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+
+The typeof operator returns the type of a variable or an expression:
+
+Example
+typeof ""             // Returns "string"
+typeof "John"         // Returns "string"
+typeof "John Doe"     // Returns "string"
+
+JavaScript has 8 Datatypes
+A JavaScript variable can hold 8 types of data:
+
+Type	Description
+String	    ||  A text of characters enclosed in quotes
+Number	    ||  A number representing a mathematical value
+Bigint	    ||  A number representing a large integer
+Boolean     ||	A data type representing true or false
+Object      ||	A collection of key-value pairs of data
+Undefined   ||	A primitive variable with no assigned value
+Null        ||	A primitive value representing object absence
+Symbol      ||	A unique and primitive identifier
+
+Examples
+// String
+let color = "Yellow";
+let lastName = "Johnson";
+
+// Number
+let length = 16;
+let weight = 7.5;
+
+// BigInt
+let x = 1234567890123456789012345n;
+let y = BigInt(1234567890123456789012345)
+
+// Boolean
+let x = true;
+let y = false;
+
+// Object
+const person = {firstName:"John", lastName:"Doe"};
+
+// Array object
+const cars = ["Saab", "Volvo", "BMW"];
+
+// Date object
+const date = new Date("2022-03-25");
+
+// Undefined
+let x;
+let y;
+
+// Null
+let x = null;
+let y = null;
+
+// Symbol
+const x = Symbol();
+const y = Symbol();
+
+JavaScript Booleans
+JavaScript booleans can only have one of two values: true or false
+The boolean value of an expression is the basis for JavaScript comparisons.
+Given that x = 5, the table below explains comparison:
+Description	    Expression	Returns
+Equal to	    ||(x == 8)	||false
+Not equal to	||(x != 8)	||true
+Greater than	||(x > 8)	||false
+Less than	    ||(x < 8)	||true
+
+Java Operator
+Operator	Description
++       ||  Addition
+-	    ||  Subtraction
+*	    ||  Multiplication
+**	    ||  Exponentiation
+/	    ||  Division
+%	    ||  Modulus (Division Remainder)
+++	    ||  Increment
+--	    ||  Decrement
+
+JavaScript Logical Operators
+Operator	Description
+&&	    ||  logical and
+||	    ||  logical or
+!	    ||  logical not
+
+Conditional Statements
+Conditional Statements allow us to perform different actions for different conditions.
+
+Conditional statements run different code depending on true or false conditions.
+
+Conditional statements include:
+
+if
+if...else
+if...else if...else
+switch
+ternary (? :)
+When to use Conditionals
+Use if to specify a code block to be executed, if a specified condition is true
+Use else to specify a code block to be executed, if the same condition is false
+Use else if to specify a new condition to test, if the first condition is false
+Use switch to specify many alternative code blocks to be executed
+Use (? :) (ternary) as a shorthand for if...else
+
+The else Statement
+Use the else statement to specify a block of code to be executed if a condition is false.
+
+if (condition) {
+  //  block of code to be executed if the condition is true
+} else {
+  //  block of code to be executed if the condition is false
+}
+
+Switch Control Flow
+Based on a condition, switch selects one or more code blocks to be executed.
+
+switch executes the code blocks that matches an expression.
+
+switch is often used as a more readable alternative to many if...else if...else statements, especially when dealing with multiple possible values.
+
+Syntax
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+Example
+This example uses the weekday number to calculate the weekday name:
+
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+     day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+}
+The Boolean Data Type
+In JavaScript, a Boolean is a primitive data type that can only have one of two values:
+
+true or false
+
+The Boolean value of an expression is the basis for all JavaScript comparisons and conditions.
+The For Loop
+The for statement creates a loop with 3 optional expressions:
+
+for (exp 1; exp 2; exp 3) {
+  // code block to be executed
+}
+exp 1 is executed (one time) before the execution of the code block.
+
+exp 2 defines the condition for executing the code block.
+
+exp 3 is executed (every time) after the code block has been executed.
+
+While Loops
+While loops execute a block of code as long as a specified condition is true.
+
+JavaScript have two types of while loops:
+
+The while loop
+The do while loop
+
+The Do While Loop
+The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+Syntax
+do {
+  // code block to be executed
+}
+while (condition);
+
+JavaScript String includes()
+The includes() method returns true if a string contains a specified value.
+
+Otherwise it returns false.
+
+Examples
+Check if a string includes "world":
+
+let text = "Hello world, welcome to the universe.";
+text.includes("world");

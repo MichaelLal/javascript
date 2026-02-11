@@ -1,0 +1,139 @@
+HTML Document Object Model
+The HTML DOM (HTML Document Object Model) is an Object Model for HTML Documents.
+The DOM Tree
+When a web page loads, the browser creates a tree-like representation of the HTML document.
+
+Each part of the document are nodes in the tree:
+
+Node	Description
+Document	    Owner of all nodes in the document
+<html>	    ||  Element Node
+<head>	    ||  Element Node
+<body>	    ||  Element Node
+<a>	        ||  Element Node
+href        ||  Attribute Node
+<h1>        ||	Element Node
+My Header   ||	Text Node
+
+Example
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+// Access a paragraph Element
+const myPara = document.getElementById("demo");
+
+// Change the content of the Element
+myPara.innerHTML = "Hello World!";
+</script>
+
+</body>
+</html>
+
+avaScript is the Language
+The DOM API is a standard for how to get, change, add, or delete HTML DOM elements.
+
+JavaScript is the language used in browsers to access the DOM through the API.
+
+API Methods and Properties
+Developers use global objects like document and window as entry points to any API.
+
+If you want to access any element in an HTML page, you always start with accessing the document object. The document object represents your web page.
+
+To manipulate HTML with JavaScript, you first need to select an element.
+
+Below are some examples of how you can use the document object to access HTML:
+
+Selecting HTML Elements
+Method	Description
+document.getElementById(id)	Find an element by element id
+document.getElementsByTagName(name)	Find elements by tag name
+document.getElementsByClassName(name)	Find elements by class name
+document.querySelector(selector)	Find the first element that matches a CSS selector
+document.querySelectorAll(selector)	Find all elements that match a CSS selector
+
+
+Accessing Element Content
+Property	                Description
+element.innerHTML	||      The HTML content of an element
+element.textContent	||      The text content of an element
+Accessing Element Attributes
+Property	                    Description
+element.attribute	    ||      Change the attribute value of an HTML element
+element.style.property	||      The style of an HTML element
+Changing Element Attributes
+Method	                        Description
+element.setAttribute()	||      Create or set a new attribute
+Manipulating Structure
+Method	Description
+document.createElement()	||      Creates a new HTML element
+document.removeChild()	    ||      Remove an HTML element
+document.appendChild()	    ||      Add an HTML element
+document.replaceChild()	    ||      Replace an HTML element
+Adding Event Handlers
+Method	                                                        Description
+document.getElementById(id).onclick = function(){code}  ||  	Adding event handler code to an onclick event
+
+Changing HTML Content
+The HTML DOM allows JavaScript to change both the text and the content of HTML elements.
+
+The easiest way to modify the content is by using the innerHTML property:
+
+document.getElementById(id).innerHTML = new HTML
+The innerHTML Property
+The easiest way to get the content of an element is by using the innerHTML property.
+
+The innerHTML property is useful for getting or replacing the content of HTML elements.
+
+Example
+Change the content of a <p> element:
+
+<html>
+<body>
+
+<p id="p1">Hello World!</p>
+
+<script>
+document.getElementById("p1").innerHTML = "New text!";
+</script>
+
+</body>
+</html>
+
+Example
+Changes the value of the src attribute of an <img> element:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<img id="myImage" src="smiley.gif">
+
+<script>
+document.getElementById("myImage").src = "landscape.jpg";
+</script>
+
+</body>
+</html>
+Changing HTML Style
+The HTML DOM allows JavaScript to change the style of HTML elements.
+
+To change the style of an HTML element, use this syntax:
+
+document.getElementById(id).style.property= new style
+Example
+Changes the style of a <p> element:
+
+<html>
+<body>
+
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color = "blue";
+</script>
+
+</body>
+</html>
