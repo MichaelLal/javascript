@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <Body>
+    <h2>Working with java script function</h2>
+    <p >call function from events</p>
+    <button onclick="showhello()"> Click me </button>
+    <p id="demo"></p>
+    <script>
+        function sayhello(){
+            return "Hello World";
+        }
+        function showhello(){
+            document.getElementById("demo").innerHTML = sayhello();
+        }
+    </script>
+    </Body>
