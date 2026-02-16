@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <Body>
+    <h2>Functions and Strings</h2>
+    <p> outside myfunction() carname os undefined.</p>
+
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        let text = "Outside: " + typeof carname;
+        document.getElementById("demo1").innerHTML = text;
+        function myFunction(){
+            let carname = "Volvo";
+            let text = "Inside: " + typeof carname + " "+ carname;
+            document.getElementById("demo2").innerHTML = text;
+        }
+    </script>
+    </Body>
