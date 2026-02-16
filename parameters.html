@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <Body>
+    <h2>Working with java script function</h2>
+    <p> fahrenheit to celsius</p>
+    <p id="demo"></p>
+    <script>
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9;
+        }
+        let result = fahrenheitToCelsius(4);
+        document.getElementById("demo").innerHTML = "The result is " + result;
+    </script>
+    </Body>
