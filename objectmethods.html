@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Objects</h1>
+<h2>Object Methods</h2>
+<p>A method is a function definition stored as a property value.</p>
+<p id="demo"></p>
+
+<script>
+const car = {
+  brand: "Honda",
+  model: "Civic",
+  year: 2022,
+  displayCar: function() {
+    return this.brand + " " + this.model + " (" + this.year + ")";
+  }
+};
+
+document.getElementById("demo").innerHTML = car.displayCar();
+</script>
+
+</body>
+</html>
