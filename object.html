@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Object</title>
+</head>
+<body>
+
+<h1>JavaScript Object Example</h1>
+
+<script>
+  // Create an object
+  const car = {
+    brand: "Toyota",
+    model: "Corolla",
+    year: 2023,
+    color: "blue",
+    
+    displayInfo: function() {
+      return this.brand + " " + this.model + " (" + this.year + ")";
+    }
+  };
+
+  console.log(car.brand);           // Output: Toyota
+  console.log(car.displayInfo());   // Output: Toyota Corolla (2023)
+  
+  document.write("<p>" + car.displayInfo() + "</p>");
+</script>
+
+</body>
+</html>
