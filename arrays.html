@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>Using push() to Add Values and finding length </h2>
+<p id="demo"></p>
+
+<script>
+const numbers = [10, 20, 30];
+
+// Display original array and length
+document.getElementById("demo").innerHTML = 
+  "Original array: " + numbers + "<br>" +
+  "Original length: " + numbers.length + "<br><br>";
+
+// Use push() to add new numbers
+numbers.push(40);
+numbers.push(50);
+numbers.push(60);
+numbers.push(70);
+
+// Display updated array and length
+document.getElementById("demo").innerHTML += 
+  "After push(): " + numbers + "<br>" +
+  "New length: " + numbers.length + "<br><br>";
+
+// Access values by index
+document.getElementById("demo").innerHTML += 
+  "Value at index 0: " + numbers[0] + "<br>" +
+  "Value at index 3: " + numbers[3] + "<br>" +
+  "Value at index 6: " + numbers[6];
+</script>
+
+</body>
+</html>
