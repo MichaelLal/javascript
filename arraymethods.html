@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>All Basic Array Methods</h2>
+<p id="demo"></p>
+
+<script>
+let output = "";
+
+// 1. Array length
+const fruits = ["Apple", "Banana", "Orange", "Grape"];
+output += "1. Array length: " + fruits.length + "<br>";
+output += "   Array: " + fruits + "<br><br>";
+
+// 2. Array toString()
+output += "2. Array toString(): " + fruits.toString() + "<br><br>";
+
+// 3. Array at()
+output += "3. Array at():" + "<br>";
+output += "   at(0): " + fruits.at(0) + "<br>";
+output += "   at(-1): " + fruits.at(-1) + "<br>";
+output += "   at(-2): " + fruits.at(-2) + "<br><br>";
+
+// 4. Array join()
+output += "4. Array join():" + "<br>";
+output += "   join('-'): " + fruits.join("-") + "<br>";
+output += "   join(' | '): " + fruits.join(" | ") + "<br><br>";
+
+// 5. Array pop() - removes last element
+let fruitsCopy1 = ["Apple", "Banana", "Orange", "Grape"];
+output += "5. Array pop():" + "<br>";
+output += "   Before pop: " + fruitsCopy1 + "<br>";
+let popped = fruitsCopy1.pop();
+output += "   Popped value: " + popped + "<br>";
+output += "   After pop: " + fruitsCopy1 + "<br><br>";
+
+// 6. Array push() - adds element at end
+let fruitsCopy2 = ["Apple", "Banana"];
+output += "6. Array push():" + "<br>";
+output += "   Before push: " + fruitsCopy2 + "<br>";
+fruitsCopy2.push("Orange");
+fruitsCopy2.push("Grape");
+output += "   After push: " + fruitsCopy2 + "<br><br>";
+
+// 7. Array shift() - removes first element
+let fruitsCopy3 = ["Apple", "Banana", "Orange"];
+output += "7. Array shift():" + "<br>";
+output += "   Before shift: " + fruitsCopy3 + "<br>";
+let shifted = fruitsCopy3.shift();
+output += "   Shifted value: " + shifted + "<br>";
+output += "   After shift: " + fruitsCopy3 + "<br><br>";
+
+// 8. Array unshift() - adds element at beginning
+let fruitsCopy4 = ["Banana", "Orange"];
+output += "8. Array unshift():" + "<br>";
+output += "   Before unshift: " + fruitsCopy4 + "<br>";
+fruitsCopy4.unshift("Apple");
+fruitsCopy4.unshift("Mango");
+output += "   After unshift: " + fruitsCopy4 + "<br><br>";
+
+// 9. Array isArray()
+output += "9. Array isArray():" + "<br>";
+output += "   isArray(fruits): " + Array.isArray(fruits) + "<br>";
+output += "   isArray('hello'): " + Array.isArray("hello") + "<br>";
+output += "   isArray(123): " + Array.isArray(123) + "<br><br>";
+
+// 10. Array delete() - leaves empty slot
+let fruitsCopy5 = ["Apple", "Banana", "Orange", "Grape"];
+output += "10. Array delete():" + "<br>";
+output += "   Before delete: " + fruitsCopy5 + "<br>";
+delete fruitsCopy5[1];
+output += "   After delete [1]: " + fruitsCopy5 + "<br>";
+output += "   Length: " + fruitsCopy5.length + "<br><br>";
+
+// 11. Array concat() - combines arrays
+let arr1 = ["Apple", "Banana"];
+let arr2 = ["Orange", "Grape"];
+let arr3 = ["Mango"];
+output += "11. Array concat():" + "<br>";
+output += "   arr1: " + arr1 + "<br>";
+output += "   arr2: " + arr2 + "<br>";
+output += "   arr3: " + arr3 + "<br>";
+let combined = arr1.concat(arr2, arr3);
+output += "   concat result: " + combined + "<br><br>";
+
+// 12. Array copyWithin() - copies elements within array
+let numbers = [1, 2, 3, 4, 5];
+output += "12. Array copyWithin():" + "<br>";
+output += "   Before copyWithin: " + numbers + "<br>";
+numbers.copyWithin(0, 3, 5);
+output += "   After copyWithin(0, 3, 5): " + numbers + "<br><br>";
+
+// 13. Array flat() - flattens nested arrays
+let nestedArray = [1, 2, [3, 4, [5, 6]]];
+output += "13. Array flat():" + "<br>";
+output += "   Original: " + nestedArray + "<br>";
+output += "   flat(1): " + nestedArray.flat(1) + "<br>";
+output += "   flat(2): " + nestedArray.flat(2) + "<br><br>";
+
+// 14. Array slice() - extracts a section
+let sliceArray = ["Apple", "Banana", "Orange", "Grape", "Mango"];
+output += "14. Array slice():" + "<br>";
+output += "   Original: " + sliceArray + "<br>";
+output += "   slice(1, 3): " + sliceArray.slice(1, 3) + "<br>";
+output += "   slice(2): " + sliceArray.slice(2) + "<br>";
+output += "   slice(-2): " + sliceArray.slice(-2) + "<br><br>";
+
+// 15. Array splice() - adds/removes elements
+let spliceArray = ["Apple", "Banana", "Orange", "Grape"];
+output += "15. Array splice():" + "<br>";
+output += "   Before splice: " + spliceArray + "<br>";
+let removed = spliceArray.splice(1, 2, "Kiwi", "Mango");
+output += "   Removed: " + removed + "<br>";
+output += "   After splice(1, 2, 'Kiwi', 'Mango'): " + spliceArray + "<br><br>";
+
+// 16. Array toSpliced() - returns new array without changing original
+let toSplicedArray = ["Apple", "Banana", "Orange", "Grape"];
+output += "16. Array toSpliced():" + "<br>";
+output += "   Original: " + toSplicedArray + "<br>";
+let newArray = toSplicedArray.toSpliced(1, 2, "Kiwi");
+output += "   toSpliced(1, 2, 'Kiwi'): " + newArray + "<br>";
+output += "   Original unchanged: " + toSplicedArray + "<br>";
+
+document.getElementById("demo").innerHTML = output;
+</script>
+
+</body>
+</html>
