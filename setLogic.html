@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Sets</h1>
+<h2>Set Methods Example</h2>
+
+<p id="demo"></p>
+
+<script>
+// Set Methods
+
+// Union
+Set.prototype.union = function(otherSet) {
+  return new Set([...this, ...otherSet]);
+};
+
+// Intersection
+Set.prototype.intersection = function(otherSet) {
+  return new Set([...this].filter(x => otherSet.has(x)));
+};
+
+// Difference
+Set.prototype.difference = function(otherSet) {
+  return new Set([...this].filter(x => !otherSet.has(x)));
+};
+
+// Symmetric Difference
+Set.prototype.symmetricDifference = function(otherSet) {
+  return this.union(otherSet).difference(this.intersection(otherSet));
+};
+
+// isSubsetOf
+Set.prototype.isSubsetOf = function(otherSet) {
+  return [...this].every(x => otherSet.has(x));
+};
+
+// isSupersetOf
+Set.prototype.isSupersetOf = function(otherSet) {
+  return [...otherSet].every(x => this.has(x));
+};
+
+// isDisjointFrom
+Set.prototype.isDisjointFrom = function(otherSet) {
+  return [...this].every(x => !otherSet.has(x));
+};
+
+// Create Sets
+const A = new Set(['a','b','c']);
+const B = new Set(['b','c','d']);
+
+//Operations
+const union = A.union(B);
+const intersection = A.intersection(B);
+const difference = A.difference(B);
+const symmetric = A.symmetricDifference(B);
+
+const isSubset = A.isSubsetOf(B);
+const isSuperset = A.isSupersetOf(B);
+const isDisjoint = A.isDisjointFrom(B);
+
+// Display Results
+function setToString(set) {
+  return [...set].join(", ");
+}
+
+let output = "";
+output += "Union: " + setToString(union) + "<br>";
+output += "Intersection: " + setToString(intersection) + "<br>";
+output += "Difference (A - B): " + setToString(difference) + "<br>";
+output += "Symmetric Difference: " + setToString(symmetric) + "<br><br>";
+
+output += "A is subset of B: " + isSubset + "<br>";
+output += "A is superset of B: " + isSuperset + "<br>";
+output += "A is disjoint from B: " + isDisjoint + "<br>";
+
+document.getElementById("demo").innerHTML = output;
+
+</script>
+
+</body>
+</html>
