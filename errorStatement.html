@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Error Handling</h1>
+<h2>The try...catch...finally Statement</h2>
+
+<p>Enter a number between 1 and 10:</p>
+<input id="input">
+<button onclick="checkNumber()">Check</button>
+
+<p id="demo"></p>
+
+<script>
+function checkNumber() {
+  const message = document.getElementById("demo");
+  message.innerHTML = "";
+
+  let x = document.getElementById("input").value;
+
+  try {
+    if (x == "") throw "Input is empty";
+    if (isNaN(x)) throw "Not a number";
+    
+    x = Number(x);
+    
+    if (x < 1) throw "Number is too low";
+    if (x > 10) throw "Number is too high";
+
+    message.innerHTML = "Correct! Number is valid.";
+  }
+  
+  catch(err) {
+    message.innerHTML = "Error: " + err;
+  }
+  
+  finally {
+    document.getElementById("input").value = "";
+  }
+}
+</script>
+
+</body>
+</html>
